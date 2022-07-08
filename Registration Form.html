@@ -1,15 +1,65 @@
-
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="ISO-8859-1">
   <title>Registration Form</title>
+  <style type="text/css">
+  body {
+  background-color: lightblue;
+	}
+	h3 {
+  font-color:rgba(19, 58, 34, 0.8);
+  font-size: 30px;
+  text-shadow: 2px 2px;
+  font-style: oblique;
+  font-variant: small-caps;
+}
+input[type=submit] {
+  width: 50%;
+  background-color: rgb(40, 95, 107);
+  color: white;
+  padding: 10px 15px;
+  margin: 4px 0;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+input[type=reset]{
+  background-color: rgb(40, 95, 107);
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=email], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 40px;
+}
+
+</style>
 </head>
 <body>
 
 <body>
 <h3  align="center">REGISTRATION FORM</h3>
-
-<form> 
+<div>
+<form action="" method="post"> 
 <table align="center">
 
 <tr>
@@ -126,7 +176,7 @@
 <!--------------------------------------------------------------->
 <tr>
 <td>EMAIL ID</td>
-<td><input type="text" name="Email_Id" maxlength="100" /></td>
+<td><input type="email" name="Email_Id" maxlength="100" /></td>
 </tr>
 
 <!--------------------------------------------------------------->
@@ -142,10 +192,10 @@
 <tr>
 <td>GENDER</td>
 <td>
-<input type="radio" name="Gender" value="Male" />
-Male<br>
-<input type="radio" name="Gender" value="Female" />
-Female<br>
+<select id="Gender" name="Gender">
+<option value="Male">Male</option>
+<option value="Female">Female</option>
+</select>
 </td>
 </tr>
  
@@ -239,35 +289,30 @@ Female<br>
 <tr>
 <td>COURSES<br />APPLIED FOR</td>
 <td>
-<input type="radio" name="Course_Mechanical Engineering" value="Mechanical Engineering">
-Mechanical Engineering<br>
-<input type="radio" name="Course_Electronics and Communication Engineering" value="Electronics and Communication Engineering">
-Electronics and Communication Engineering<br>
-<input type="radio" name="Course_Electrical and Electronics Engineering" value="Electrical and Electronics Engineering">
-Electrical and Electronics Engineering<br>
-<input type="radio" name="Course_Computer Science and Engineering" value="Computer Science and Engineering">
-Computer Science and Engineering<br>
-<input type="radio" name="Course_Information Technology" value="Information Technology">
-Information Technology<br>
-<input type="radio" name="Course_Artificial Intelligence and Data Science" value="Artificial Intelligence and Data Science">
-Artificial Intelligence and Data Science<br>
-<input type="radio" name="Course_Civil Engineering" value="Civil Engineering">
-Civil Engineering<br>
-<input type="radio" name="Course_Biotechnology" value="Biotechnology">
-Biotechnology<br>
+<select name="Course" id="Course">
+<option value="Course_Mechanical Engineering">Mechanical Engineering</option>
+<option value="Course_Electronics and Communication Engineering">Electronics and Communication Engineering</option>
+<option value="Course_Electrical and Electronics Engineering">Electrical and Electronics Engineering</option>
+<option value="Course_Computer Science and Engineering">Computer Science and Engineering</option>
+<option value="Course_Information Technology">Information Technology</option>
+<option value="Course_Artificial Intelligence and Data Science">Artificial Intelligence and Data Science</option>
+<option value="Course_Civil Engineering">Civil Engineering</option>
+<option value="Course_Biotechnology">Biotechnology</option>
+
+</select>
 </td>
 </tr>
  
 <tr>
 <td colspan="2" align="center">
-<input type="submit" value="Submit">
+<input type="submit" value="Submit"><br>
 <input type="reset" value="Reset">
 </td>
 </tr>
 </table>
  
 </form>
- 
+</div>
 </body>
 </html>
 
